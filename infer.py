@@ -11,6 +11,7 @@ config=Config.get_config()
 
 #get and load model
 model=Model.get_model(config)
+model.eval() 
 weight_path=f"{config.model.model_dir}/newest_model.npz"
 model.load_weights(weight_path)
 
